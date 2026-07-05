@@ -1,0 +1,42 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+body {
+
+}
+
+button,
+a,
+input,
+textarea,
+select {
+}
+
+@keyframes certFloatRotate {
+  0% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-12px) rotateY(8deg);
+  }
+  50% {
+    transform: translateY(-14px) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-12px) rotateY(-8deg);
+  }
+  100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+}
+
+.cert-card-inner {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.cert-card-group:hover .cert-card-inner {
+  animation: certFloatRotate 3.5s ease-in-out infinite;
+}
